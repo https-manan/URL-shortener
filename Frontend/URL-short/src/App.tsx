@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import axios from 'axios'
-import './App.css'
+import { useState } from "react"
+import axios from "axios"
+import "./App.css"
 
 function App() {
-  const [shorId, setShorId] = useState('')
-  const [redirectUrl, setRedirectUrl] = useState('')
+  const [shortId, setShortId] = useState("")
+  const [redirectUrl, setRedirectUrl] = useState("")
 
   async function onClickHandler() {
     try {
-      const res = await axios.post('http://localhost:8080/url', { url: redirectUrl })
-      setShorId(res.data.id)
+      const res = await axios.post("http://localhost:8080/url", {
+        url: redirectUrl,
+      })
+      setShortId(res.data.id)
     } catch (error) {
-      console.error('Error generating short URL:', error)
+      console.error("Error generating short URL:", error)
     }
   }
 
@@ -37,18 +39,18 @@ function App() {
           Generate Short URL
         </button>
 
-        {shorId && (
-          <div className="mt-4 text-center">
+        <div className="mt-4 text-center">
+          {shortId ? (
             <a
-              href={`http://localhost:8080/${shorId}`}
+              href={`http://localhost:8080/${shortId}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-yellow-300 underline hover:text-yellow-400"
             >
-              Your short URL is: {`http://localhost:8080/${shorId}`}
+              Your short URL is: {`http://localhost:8080/${shortId}`}
             </a>
-          </div>
-        )}
+          ) : null}
+        </div>
       </div>
     </div>
   )
