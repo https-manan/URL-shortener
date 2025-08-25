@@ -4,6 +4,7 @@ const app = express();
 const port  = 8080;
 const  dotenv =  require('dotenv');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const URL = require('./Model/url');
 dotenv.config();
 
@@ -19,6 +20,7 @@ const connectDB = async () => {
 
 connectDB();
 
+app.use(cors())
 app.use(express.json());
 
 
