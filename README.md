@@ -1,24 +1,30 @@
-# 🔗 URL Shortener
+# URL Shortener
 
-A simple URL shortener service that converts long URLs into short, shareable links.  
-This project is built to practice backend development, APIs, and database integration.
+A simple **URL Shortener** application with a React frontend and Express backend.  
+It allows users to convert long URLs into short, shareable links.
 
 ---
 
-## 🚀 Features
-- Shorten long URLs into custom short links  
+## GitHub Repository
+[https://github.com/https-manan/URL-shortener.git](https://github.com/https-manan/URL-shortener.git)
+
+---
+
+## Features
+- Shorten long URLs into unique short links  
 - Redirect users to the original URL  
-- Track number of clicks (planned)  
-- Simple REST API (planned)  
+- REST API for programmatic access  
+- (Planned) Track number of clicks & analytics  
 
 ---
 
-## 🛠️ Tech Stack (Planned)
-- **Backend:** Node.js / Express (or Python / Flask / Django)  
-- **Database:** MongoDB / PostgreSQL / SQLite  
-- **Frontend:** Minimal HTML + Tailwind (optional)  
-- **Deployment:** Vercel / Render / Heroku  
+## Tech Stack
+### Backend
+- **Node.js** with **Express.js**  
+- **MongoDB** 
+
+### Frontend
+- **React.js**  
+- **Tailwind CSS**
 
 ---
-
-## 📂 Project Structure (initial idea)
